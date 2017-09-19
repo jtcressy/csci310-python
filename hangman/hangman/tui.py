@@ -178,9 +178,11 @@ class Tui:  # Well, uh, this has pretty much became my main program.
         """add event listener for on state change, and change the main loop's content to match the current state"""
         self.loop.widget = self.urwidViews[e.fsm.current]
         if e.src == "game" and e.dst == "mainmenu" and e.event == "gameover":
-            self.game_over_message.set_text("You lost. Try again? The word was {}".format(self.gamedata.puzzleword))
+            message = "You Lost. The word was {}".format(self.gamedata.puzzleword)
+            self.game_over_message.set_text(message)
         if e.src == "game" and e.dst == "mainmenu" and e.event == "gamewin":
-            self.game_over_message.set_text("You win! Go again? The word was {}".format(self.gamedata.puzzleword))
+            message = "You Win! The word was {}".format(self.gamedata.puzzleword)
+            self.game_over_message.set_text(message)
         if e.event == "start":
             self.gamedata = GameData(puzzleword=grab_random_puzzleword())  # clear previous game info
             self.game_ascii_art.set_text(self.gamedata.draw_hangman(self.gamedata.guesses))
