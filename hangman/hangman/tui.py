@@ -234,13 +234,3 @@ class GameData:
             "|"
         ]
         return "\n".join(lines[0:guesses])
-
-class SwitchingPadding(urwid.Padding):
-    def padding_values(self, size, focus):
-        maxcol = size[0]
-        width, ignore = self.original_widget.pack(size, focus=focus)
-        if maxcol > width:
-            self.align = "left"
-        else:
-            self.align = "right"
-        return urwid.Padding.padding_values(self, size, focus)
