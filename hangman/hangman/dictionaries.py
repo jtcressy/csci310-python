@@ -1,8 +1,11 @@
+from xtermcolor import colorize
+
 class AsciiArt:
-    def __init__(self, input):
+    def __init__(self, input, colors: list = []):
         self.input = str(input).upper()
         self.output = str()
         self.lines = list()
+        self.colors = colors
 
     def __len__(self):
         return len(self.input)
@@ -11,7 +14,7 @@ class AsciiArt:
         lines = list()
         for idx in range(0, len(self.ascii_art["A"])):
             line = str()
-            for letter in self.input:
+            for idy, letter in enumerate(self.input):
                 line += self.ascii_art[letter][idx]
             lines.append(line + "\n")
         for line in lines:
