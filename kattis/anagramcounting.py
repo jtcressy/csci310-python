@@ -1,6 +1,7 @@
 """
 Kattis Problem: https://open.kattis.com/problems/anagramcounting
 Accepted Submission: https://open.kattis.com/submissions/2250790
+SPECIAL NOTE: RUN AS PYTHON 2 TO GET CORRECT RESULT
 """
 import sys
 import math
