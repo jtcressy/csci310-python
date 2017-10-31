@@ -3,6 +3,7 @@ Kattis Problem: https://open.kattis.com/problems/snappereasy
 Accepted submission: https://open.kattis.com/submissions/2250640
 """
 
+
 def process(N, K):
     N = int(N)
     K = int(K)
