@@ -1,6 +1,11 @@
 """
+Snapper Chain (easy)
 Kattis Problem: https://open.kattis.com/problems/snappereasy
 Accepted submission: https://open.kattis.com/submissions/2250640
+
+ALSO Passes Snapper Chain (hard) (has larger numbers, such as 1 <= N <= 30 and 0 <= K <= 10^8)
+Kattis Problem: https://open.kattis.com/problems/snapperhard
+Accepted submission: https://open.kattis.com/submissions/2250981
 """
 
 
