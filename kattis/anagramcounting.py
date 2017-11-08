@@ -1,7 +1,6 @@
 """
 Kattis Problem: https://open.kattis.com/problems/anagramcounting
 Accepted Submission: https://open.kattis.com/submissions/2250790
-SPECIAL NOTE: RUN AS PYTHON 2 TO GET CORRECT RESULT
 """
 import sys
 import math
@@ -16,7 +15,7 @@ def process(l):
             counts[c] = 1
     ans = math.factorial(len(l)-1)
     for c in counts:
-        ans /= math.factorial(counts[c])
+        ans //= math.factorial(counts[c])
     return int(ans)
 
 
